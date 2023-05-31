@@ -6,7 +6,8 @@ class ProductManager {
     }
 
     addProduct(title, description, price, thumbnail, code, stock) {
-        // Verificar que no se repita el código
+        
+        
         const existingProduct = this.products.find((product) => product.code === code);
         if (existingProduct) {
           console.error("Error: el código ya existe");
@@ -18,7 +19,7 @@ class ProductManager {
             console.error("Error: faltan datos del producto");
             return;
         }
-        // Agregar el nuevo producto con un ID autoincrementable
+        
         const newProduct = {
             id: this.products.length + 1,
             title,
